@@ -1,0 +1,74 @@
+<lab>
+    <!-- all computers in the lab -->
+    <computers>
+        <computer id="1999">
+            <manufacturer>bob-ross</manufacturer>
+            <year>1900</year>
+            <processor>i9</processor>
+
+            <monitors>
+                <monitor id="beepis">
+                    <manufacturer>your-mom</manufacturer>
+                    <resolution>1x2</resolution>
+                </monitor>
+                <monitor id="tree">
+                    <manufacturer>the-best</manufacturer>
+                    <resolution>2x1</resolution>
+                </monitor>
+            </monitors>
+        </computer>
+
+        <computer id="2222">
+            <manufacturer>your-dad</manufacturer>
+            <year>2000</year>
+            <processor>i9</processor>
+
+            <monitors>
+                <monitor id="yeetus">
+                    <manufacturer>your-gramma</manufacturer>
+                    <resolution>5x6</resolution>
+                </monitor>
+                <monitor id="beep-beep">
+                    <manufacturer>your-grampa</manufacturer>
+                    <resolution>10x1</resolution>
+                </monitor>
+            </monitors>
+        </computer>
+
+        <computer id="0000">
+            <manufacturer>big-stupid</manufacturer>
+            <year>1900</year>
+            <processor>i9</processor>
+
+            <monitors>
+                <monitor id="beepis">
+                    <manufacturer>your-mom</manufacturer>
+                    <resolution>1x2</resolution>
+                </monitor>
+                <monitor id="the-man">
+                    <manufacturer>your-uncle</manufacturer>
+                    <resolution>30x30</resolution>
+                </monitor>
+            </monitors>
+        </computer>
+
+        <computer id="1111">
+            <manufacturer>forgor</manufacturer>
+            <year>5555</year>
+            <processor>i10</processor>
+
+            <monitors>
+                <monitor id="noot-noot">
+                    <manufacturer>timothy</manufacturer>
+                    <resolution>90x2</resolution>
+                </monitor>
+                <monitor id="the-boogey-man">
+                    <manufacturer>the-rat-in-your-walls</manufacturer>
+                    <resolution>97x57</resolution>
+                </monitor>
+            </monitors>
+        </computer>
+
+    </computers>
+
+</lab>

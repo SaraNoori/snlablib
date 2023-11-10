@@ -30,28 +30,33 @@ public class App
                 System.out.println("\tProcessor: " + elmnt.getElementsByTagName("processor").item(0).getTextContent());
 
                 
-                // get list of monitors
-                NodeList monitorNodes = elmnt.getElementsByTagName("monitor");
-                
-                // loop through monitors
-                for (int i = 0; i < monitorNodes.getLength(); i++)
-                {
-                    Node monitNode = monitorNodes.item(i);
-                    if (monitNode.getNodeType() == Node.ELEMENT_NODE)
-                    {
-                        Element monitElement = (Element) monitNode;
-
-                        // print out all the stuffs in monitor
-                        System.out.println("\t" + monitElement.getTagName());
-                        System.out.println("\t\tManufacturer: " + monitElement.getElementsByTagName("manufacturer").item(0).getTextContent());
-                        System.out.println("\t\tResolution: " + monitElement.getElementsByTagName("resolution").item(0).getTextContent());
-                    }
-                }
+                printMonitorStuff(elmnt);
                 
             }
         }
 
 
+    }
+
+    public static void printMonitorStuff(Element computer)
+    {
+        // get list of monitors
+            NodeList monitorNodes = computer.getElementsByTagName("monitor");
+            
+            // loop through monitors
+            for (int i = 0; i < monitorNodes.getLength(); i++)
+            {
+                Node monitNode = monitorNodes.item(i);
+                if (monitNode.getNodeType() == Node.ELEMENT_NODE)
+                {
+                    Element monitElement = (Element) monitNode;
+
+                    // print out all the stuffs in monitor
+                    System.out.println("\t" + monitElement.getTagName());
+                    System.out.println("\t\tManufacturer: " + monitElement.getElementsByTagName("manufacturer").item(0).getTextContent());
+                    System.out.println("\t\tResolution: " + monitElement.getElementsByTagName("resolution").item(0).getTextContent());
+                }
+            }
     }
 
     public static Document readXMLFromFile(String fileNameWithPath) throws Exception

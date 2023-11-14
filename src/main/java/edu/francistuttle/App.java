@@ -7,6 +7,11 @@ public class App
 {
     public static void main( String[] args ) throws Exception
     {
+        printComputerStuff();
+    }
+
+    public static void printComputerStuff() throws Exception
+    {
         Document document = readXMLFromFile("C:/Users/sn1044604/Desktop/Github/snlablib/src/main/java/edu/francistuttle/lab.xml");
 
         Element root = document.getDocumentElement();
@@ -24,18 +29,15 @@ public class App
                 Element elmnt = (Element) node;
 
                 // print out all the stuffs in it
-                System.out.println(elmnt.getTagName());
+                System.out.println("computer " + elmnt.getAttribute("id"));
                 System.out.println("\tManufacturer: " + elmnt.getElementsByTagName("manufacturer").item(0).getTextContent());
                 System.out.println("\tYear: " + elmnt.getElementsByTagName("year").item(0).getTextContent());
                 System.out.println("\tProcessor: " + elmnt.getElementsByTagName("processor").item(0).getTextContent());
 
-                
                 printMonitorStuff(elmnt);
                 
             }
         }
-
-
     }
 
     public static void printMonitorStuff(Element computer)
@@ -52,7 +54,7 @@ public class App
                     Element monitElement = (Element) monitNode;
 
                     // print out all the stuffs in monitor
-                    System.out.println("\t" + monitElement.getTagName());
+                    System.out.println("\tMonitor " + monitElement.getAttribute("id"));
                     System.out.println("\t\tManufacturer: " + monitElement.getElementsByTagName("manufacturer").item(0).getTextContent());
                     System.out.println("\t\tResolution: " + monitElement.getElementsByTagName("resolution").item(0).getTextContent());
                 }
